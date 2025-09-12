@@ -207,7 +207,7 @@ Now open:
 If you **Stop/Start EC2 instance**, public IP changes.
 When that happens, update IP in:
 
-1. GitHub Webhook → Payload URL.
+1. GitHub Webhook → Payload URL 
 2. Jenkins Publish over SSH → Hostname.
 
 ---
