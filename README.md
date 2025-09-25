@@ -208,7 +208,7 @@ If you **Stop/Start EC2 instance**, public IP changes.
 When that happens, update IP in:
 
 1. GitHub Webhook → Payload URL 
-2. Jenkins Publish over SSH → Hostname.
+2. Go in Manage Jenkins -> Seeting -> last you will see Publish over SSH → change  Hostname(old IP) to new one .
 
 ---
 
