@@ -170,7 +170,7 @@ Save ✅
 Change Apache default directory:
 
 ```bash
-sudo nano /etc/apache2/sites-enabled/000-default.conf
+sudo vim /etc/apache2/sites-enabled/000-default.conf
 ```
 
 Change:
