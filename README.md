@@ -185,6 +185,25 @@ to:
 DocumentRoot /var/www/html/webdirectory
 ```
 
+if it is not working then execute this in ec2 connect
+```
+sudo tee /etc/apache2/sites-enabled/000-default.conf > /dev/null <<EOL
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html/webdirectory
+
+    <Directory /var/www/html/webdirectory>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOL
+```
+
 Save → exit → restart Apache:
 
 ```bash
@@ -195,6 +214,7 @@ Now open:
 👉 `http://<your-ec2-public-ip>/`
 
 ---
+
 
 ## 🟢 Step 10: Test the Pipeline 🎉
 
